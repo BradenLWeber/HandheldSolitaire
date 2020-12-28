@@ -65,12 +65,12 @@ def run_game(deck):
 			try:
 				if flip[-4][0] == flip[-1][0]:
 					#print('Numbers match')
-					for i in range(4):
+					for _ in range(4):
 						pile.append(flip.pop())
 				if flip[-4][1] == flip[-1][1]:
 					if flip[-1][1] == flip[-2][1] and flip[-1][1] == flip[-3][1]:
 						#print('4 suites match')
-						for i in range(4):
+						for _ in range(4):
 							pile.append(flip.pop())
 					else:
 						#print('2 suites match')
@@ -129,7 +129,7 @@ def game_recycle(wins):
 
 	# Count the perpetuals and then take them out of the list of attempts
 	perpetuals = attempts.count(100)
-	for i in range(perpetuals):
+	for _ in range(perpetuals):
 		attempts.remove(100)
 		total -= 100	
 	
